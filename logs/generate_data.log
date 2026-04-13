@@ -1,0 +1,13 @@
+2026-04-13 20:22:06,521 [INFO] ==================================================
+2026-04-13 20:22:06,521 [INFO] INÍCIO DA GERAÇÃO DE DADOS FAKE
+2026-04-13 20:22:06,521 [INFO] ==================================================
+2026-04-13 20:22:06,521 [INFO] Gerando 3000 clientes...
+2026-04-13 20:22:06,601 [INFO] ✔ data/raw/customers.csv gerado com 3000 registros.
+2026-04-13 20:22:06,601 [INFO] Gerando 300 produtos...
+2026-04-13 20:22:06,605 [INFO] ✔ data/raw/products.csv gerado com 300 registros.
+2026-04-13 20:22:06,605 [INFO] Gerando 10000 pedidos...
+2026-04-13 20:22:06,733 [INFO] ✔ data/raw/orders.csv gerado com 10000 registros.
+2026-04-13 20:22:06,734 [INFO] Gerando 20000 itens de pedido...
+2026-04-13 20:22:06,791 [INFO] ✔ data/raw/order_items.csv gerado com 20000 registros.
+2026-04-13 20:22:06,791 [INFO] Geração concluída em 0.27s
+2026-04-13 20:22:06,791 [INFO] ==================================================

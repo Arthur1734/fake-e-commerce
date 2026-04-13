@@ -1,0 +1,107 @@
+2026-04-13 20:22:29,260 [INFO] ============================================================
+2026-04-13 20:22:29,260 [INFO]   PIPELINE ETL BATCH — E-COMMERCE (DADOS FAKE)
+2026-04-13 20:22:29,260 [INFO]   Início: 2026-04-13 20:22:29
+2026-04-13 20:22:29,260 [INFO] ============================================================
+2026-04-13 20:22:29,260 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:29,260 [INFO] ETAPA 1: EXTRAÇÃO
+2026-04-13 20:22:29,260 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:29,264 [INFO] ✔ Schema validado para customers (3000 registros)
+2026-04-13 20:22:29,264 [INFO]   Extraído: customers.csv → 3000 linhas
+2026-04-13 20:22:29,265 [INFO] ✔ Schema validado para products (300 registros)
+2026-04-13 20:22:29,265 [INFO]   Extraído: products.csv → 300 linhas
+2026-04-13 20:22:29,269 [INFO] ✔ Schema validado para orders (10000 registros)
+2026-04-13 20:22:29,270 [INFO]   Extraído: orders.csv → 10000 linhas
+2026-04-13 20:22:29,274 [INFO] ✔ Schema validado para order_items (20000 registros)
+2026-04-13 20:22:29,274 [INFO]   Extraído: order_items.csv → 20000 linhas
+2026-04-13 20:22:29,274 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:29,274 [INFO] ETAPA 2: TRANSFORMAÇÃO
+2026-04-13 20:22:29,274 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:29,278 [INFO]   ✔ Tipos ajustados: customers
+2026-04-13 20:22:29,279 [INFO]   ✔ Tipos ajustados: products
+2026-04-13 20:22:29,282 [INFO]   ✔ Tipos ajustados: orders
+2026-04-13 20:22:29,282 [INFO]   ✔ Tipos ajustados: order_items
+2026-04-13 20:22:29,283 [INFO]   ✔ customers: sem nulos
+2026-04-13 20:22:29,283 [INFO]   ✔ products: sem nulos
+2026-04-13 20:22:29,283 [INFO]   ✔ orders: sem nulos
+2026-04-13 20:22:29,283 [INFO]   ✔ order_items: sem nulos
+2026-04-13 20:22:29,284 [INFO]   ✔ Coluna total_price calculada em order_items
+2026-04-13 20:22:29,300 [INFO]   ✔ Base consolidada criada: 20000 linhas, 18 colunas
+2026-04-13 20:22:29,455 [INFO]   ✔ CSVs transformados salvos em data/transformed/
+2026-04-13 20:22:29,455 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:29,455 [INFO] ETAPA 3: CARGA (DuckDB)
+2026-04-13 20:22:29,455 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:29,464 [ERROR] ERRO NO PIPELINE: Parser Error: syntax error at end of input
+Traceback (most recent call last):
+  File "/Users/arthurorange/dataops-mini-lab/etl_pipeline.py", line 290, in <module>
+    load(transformed_dfs)
+  File "/Users/arthurorange/dataops-mini-lab/etl_pipeline.py", line 185, in load
+    con.execute(f"CREATE TABLE {table} AS SELECT * FROM dfs['{name}']")
+_duckdb.ParserException: Parser Error: syntax error at end of input
+2026-04-13 20:22:46,424 [INFO] ============================================================
+2026-04-13 20:22:46,424 [INFO]   PIPELINE ETL BATCH — E-COMMERCE (DADOS FAKE)
+2026-04-13 20:22:46,424 [INFO]   Início: 2026-04-13 20:22:46
+2026-04-13 20:22:46,424 [INFO] ============================================================
+2026-04-13 20:22:46,424 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:46,424 [INFO] ETAPA 1: EXTRAÇÃO
+2026-04-13 20:22:46,424 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:46,431 [INFO] ✔ Schema validado para customers (3000 registros)
+2026-04-13 20:22:46,431 [INFO]   Extraído: customers.csv → 3000 linhas
+2026-04-13 20:22:46,433 [INFO] ✔ Schema validado para products (300 registros)
+2026-04-13 20:22:46,433 [INFO]   Extraído: products.csv → 300 linhas
+2026-04-13 20:22:46,437 [INFO] ✔ Schema validado para orders (10000 registros)
+2026-04-13 20:22:46,437 [INFO]   Extraído: orders.csv → 10000 linhas
+2026-04-13 20:22:46,442 [INFO] ✔ Schema validado para order_items (20000 registros)
+2026-04-13 20:22:46,442 [INFO]   Extraído: order_items.csv → 20000 linhas
+2026-04-13 20:22:46,442 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:46,442 [INFO] ETAPA 2: TRANSFORMAÇÃO
+2026-04-13 20:22:46,442 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:46,450 [INFO]   ✔ Tipos ajustados: customers
+2026-04-13 20:22:46,450 [INFO]   ✔ Tipos ajustados: products
+2026-04-13 20:22:46,453 [INFO]   ✔ Tipos ajustados: orders
+2026-04-13 20:22:46,454 [INFO]   ✔ Tipos ajustados: order_items
+2026-04-13 20:22:46,455 [INFO]   ✔ customers: sem nulos
+2026-04-13 20:22:46,455 [INFO]   ✔ products: sem nulos
+2026-04-13 20:22:46,455 [INFO]   ✔ orders: sem nulos
+2026-04-13 20:22:46,456 [INFO]   ✔ order_items: sem nulos
+2026-04-13 20:22:46,456 [INFO]   ✔ Coluna total_price calculada em order_items
+2026-04-13 20:22:46,478 [INFO]   ✔ Base consolidada criada: 20000 linhas, 18 colunas
+2026-04-13 20:22:46,623 [INFO]   ✔ CSVs transformados salvos em data/transformed/
+2026-04-13 20:22:46,623 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:46,623 [INFO] ETAPA 3: CARGA (DuckDB)
+2026-04-13 20:22:46,623 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:46,648 [INFO]   ✔ raw.customers: 3000 registros
+2026-04-13 20:22:46,651 [INFO]   ✔ raw.products: 300 registros
+2026-04-13 20:22:46,654 [INFO]   ✔ raw.orders: 10000 registros
+2026-04-13 20:22:46,658 [INFO]   ✔ raw.order_items: 20000 registros
+2026-04-13 20:22:46,660 [INFO]   ✔ treated.customers: 3000 registros
+2026-04-13 20:22:46,662 [INFO]   ✔ treated.products: 300 registros
+2026-04-13 20:22:46,664 [INFO]   ✔ treated.orders: 10000 registros
+2026-04-13 20:22:46,668 [INFO]   ✔ treated.order_items: 20000 registros
+2026-04-13 20:22:46,691 [INFO]   ✔ analytics.consolidated: 20000 registros
+2026-04-13 20:22:46,739 [INFO]   ✔ Banco DuckDB salvo em data/ecommerce.duckdb
+2026-04-13 20:22:46,739 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:46,740 [INFO] ETAPA 4: CONSULTAS ANALÍTICAS
+2026-04-13 20:22:46,740 [INFO] ──────────────────────────────────────────────────
+2026-04-13 20:22:46,745 [INFO] 
+==================================================
+2026-04-13 20:22:46,745 [INFO]   1. Faturamento total por mês
+2026-04-13 20:22:46,745 [INFO] ==================================================
+2026-04-13 20:22:46,751 [INFO] 
+==================================================
+2026-04-13 20:22:46,751 [INFO]   2. Faturamento por categoria
+2026-04-13 20:22:46,751 [INFO] ==================================================
+2026-04-13 20:22:46,753 [INFO] 
+==================================================
+2026-04-13 20:22:46,753 [INFO]   3. Quantidade de pedidos por estado
+2026-04-13 20:22:46,753 [INFO] ==================================================
+2026-04-13 20:22:46,755 [INFO] 
+==================================================
+2026-04-13 20:22:46,755 [INFO]   4. Ticket médio por cliente
+2026-04-13 20:22:46,755 [INFO] ==================================================
+2026-04-13 20:22:46,759 [INFO] 
+==================================================
+2026-04-13 20:22:46,759 [INFO]   5. Top 10 produtos mais vendidos
+2026-04-13 20:22:46,759 [INFO] ==================================================
+2026-04-13 20:22:46,761 [INFO] ============================================================
+2026-04-13 20:22:46,761 [INFO]   PIPELINE CONCLUÍDO COM SUCESSO em 0.34s
+2026-04-13 20:22:46,761 [INFO] ============================================================
