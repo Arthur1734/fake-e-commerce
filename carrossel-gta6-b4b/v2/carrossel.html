@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>B4B GTA6 v2</title>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Yellowtail&family=Caveat:wght@600&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Yellowtail&family=Caveat:wght@600&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@500&family=IBM+Plex+Sans:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 :root{--plum:#1f0c2e;--plum2:#3a1648;--cream:#fff1e2;--pink:#ff5c9a;--peach:#ffab6b;--gold:#ffd28a;--teal:#47e0c8;--ink:#1f0c2e}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -21,12 +21,9 @@ body{background:#0b0510;display:flex;flex-direction:column;align-items:center;ga
 .hd{position:absolute;top:52px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;z-index:15;
  font:500 20px 'JetBrains Mono',monospace;letter-spacing:.5px}
 .logo{display:flex;align-items:center;gap:14px}
-.mark{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;position:relative;
- background:conic-gradient(from 200deg,var(--pink),var(--peach),var(--gold),var(--teal),var(--pink));padding:3px}
-.mark span{white-space:nowrap;width:100%;height:100%;border-radius:50%;background:var(--plum);display:flex;align-items:center;justify-content:center;
- font:400 19px Anton;letter-spacing:0;color:var(--cream)}
-.mark span i{font-style:normal;color:var(--pink)}
-.logo small{display:block;font-size:20px;opacity:.85}
+.b4b{font:700 46px/1 'IBM Plex Sans',Inter,sans-serif;letter-spacing:-.03em;color:inherit}
+.b4b i{font-style:normal;color:#ff6600}
+.logo small{display:block;font:400 19px 'IBM Plex Mono',monospace;opacity:.85;padding-left:14px;border-left:1.5px solid currentColor}
 .logo small b{font-weight:500;opacity:1}
 .ft{position:absolute;bottom:50px;left:64px;right:64px;display:flex;align-items:center;gap:24px;z-index:15;font:500 20px 'JetBrains Mono',monospace}
 .ft .ln{flex:1;height:1px;background:currentColor;opacity:.35}
@@ -54,7 +51,7 @@ body{background:#0b0510;display:flex;flex-direction:column;align-items:center;ga
 <section class="s dusk grid" id="s1">
   <div class="sun" style="width:820px;height:820px;left:130px;top:300px;opacity:.9;z-index:2"></div>
   <div class="abs" style="inset:0;background:url(assets/skyline.jpg) center 70%/cover;opacity:.18;mix-blend-mode:screen;z-index:2"></div>
-  <div class="hd"><div class="logo"><div class="mark"><span>B<i>4</i>B</span></div><small><b>@b4b</b> | Sites que vendem</small></div><span>arrasta pro lado →</span></div>
+  <div class="hd"><div class="logo"><span class="b4b">B<i>4</i>B</span><small>@b4b.digital</small></div><span>arrasta pro lado →</span></div>
 
   <div class="abs script" style="top:150px;left:90px;font-size:120px;transform:rotate(-7deg);z-index:6">seu site é o</div>
   <div class="abs disp" style="top:268px;left:0;right:0;text-align:center;font-size:318px;z-index:3;
@@ -71,7 +68,7 @@ body{background:#0b0510;display:flex;flex-direction:column;align-items:center;ga
 
 <!-- ============ 02 HYPE ============ -->
 <section class="s grid" id="s2" style="background:linear-gradient(180deg,#1f0c2e,#3a1648)">
-  <div class="hd"><div class="logo"><div class="mark"><span>B<i>4</i>B</span></div><small><b>@b4b</b> | Sites que vendem</small></div><span>01 — hype</span></div>
+  <div class="hd"><div class="logo"><span class="b4b">B<i>4</i>B</span><small>@b4b.digital</small></div><span>01 — hype</span></div>
   <div class="abs" style="top:190px;left:64px;z-index:5"><span class="tag" style="color:var(--teal)">● recorde no YouTube</span></div>
   <div class="abs serif" style="top:250px;left:56px;font-size:330px;z-index:5;color:var(--cream)">90<i style="color:var(--peach)">mi</i></div>
   <div class="abs" style="top:560px;left:64px;z-index:5;font-size:40px;font-weight:500">de views em <span class="script" style="font-size:64px">24 horas</span>.</div>
@@ -89,7 +86,7 @@ body{background:#0b0510;display:flex;flex-direction:column;align-items:center;ga
 
 <!-- ============ 03 PRIMEIRA IMPRESSAO ============ -->
 <section class="s cream grid" id="s3">
-  <div class="hd"><div class="logo"><div class="mark"><span>B<i>4</i>B</span></div><small><b>@b4b</b> | Sites que vendem</small></div><span>02 — impressão</span></div>
+  <div class="hd"><div class="logo"><span class="b4b">B<i>4</i>B</span><small>@b4b.digital</small></div><span>02 — impressão</span></div>
   <div class="abs serif" style="top:170px;left:64px;right:64px;font-size:124px;z-index:5">O trailer não explica.<br><i style="color:#c2306f">Ele faz sentir.</i></div>
   <div class="abs body" style="top:470px;left:64px;width:820px;z-index:5;opacity:.8">Seu site tem poucos segundos pro visitante decidir se fica. O que precisa estar na tela:</div>
   <!-- browser mock -->
@@ -120,7 +117,7 @@ body{background:#0b0510;display:flex;flex-direction:column;align-items:center;ga
 
 <!-- ============ 04 MAPA ============ -->
 <section class="s grid" id="s4" style="background:radial-gradient(120% 80% at 80% 60%,#3d1a55,#1f0c2e 70%)">
-  <div class="hd"><div class="logo"><div class="mark"><span>B<i>4</i>B</span></div><small><b>@b4b</b> | Sites que vendem</small></div><span>03 — navegação</span></div>
+  <div class="hd"><div class="logo"><span class="b4b">B<i>4</i>B</span><small>@b4b.digital</small></div><span>03 — navegação</span></div>
   <div class="abs disp" style="top:180px;left:64px;font-size:170px;z-index:5">Mundo<br>aberto,</div>
   <div class="abs script" style="top:470px;left:110px;font-size:140px;transform:rotate(-6deg);z-index:6;color:var(--teal);text-shadow:0 0 26px rgba(71,224,200,.5)">com mapa.</div>
   <svg class="abs" style="right:-70px;top:520px;z-index:4" width="640" height="640" viewBox="0 0 640 640">
@@ -148,7 +145,7 @@ body{background:#0b0510;display:flex;flex-direction:column;align-items:center;ga
 
 <!-- ============ 05 PERFORMANCE ============ -->
 <section class="s dusk grid" id="s5">
-  <div class="hd"><div class="logo"><div class="mark"><span>B<i>4</i>B</span></div><small><b>@b4b</b> | Sites que vendem</small></div><span>04 — velocidade</span></div>
+  <div class="hd"><div class="logo"><span class="b4b">B<i>4</i>B</span><small>@b4b.digital</small></div><span>04 — velocidade</span></div>
   <div class="abs serif" style="top:170px;left:64px;right:64px;font-size:132px;z-index:5">Gráfico lindo<br>não salva<br><i style="color:#ffe3a3">jogo travado.</i></div>
   <!-- loading card -->
   <div class="abs" style="top:640px;left:64px;right:64px;height:300px;border-radius:26px;background:rgba(31,12,46,.88);z-index:5;padding:44px 48px;box-shadow:0 30px 70px rgba(31,12,46,.4)">
@@ -168,7 +165,7 @@ body{background:#0b0510;display:flex;flex-direction:column;align-items:center;ga
 <section class="s" id="s6">
   <div class="abs" style="inset:0;background:url(assets/personagens.jpg) 30% 0/auto 100%"></div>
   <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(31,12,46,.75) 0%,rgba(31,12,46,.1) 30%,rgba(31,12,46,.2) 50%,rgba(31,12,46,.96) 76%)"></div>
-  <div class="hd"><div class="logo"><div class="mark"><span>B<i>4</i>B</span></div><small><b>@b4b</b> | Sites que vendem</small></div><span>05 — conversão</span></div>
+  <div class="hd"><div class="logo"><span class="b4b">B<i>4</i>B</span><small>@b4b.digital</small></div><span>05 — conversão</span></div>
   <div class="abs" style="top:190px;right:64px;z-index:6;width:440px;background:rgba(10,4,16,.82);border-radius:6px;padding:24px 28px;border-left:6px solid var(--gold)">
     <div style="font:500 18px 'JetBrains Mono';letter-spacing:3px;color:var(--gold)">OBJETIVO</div>
     <div style="font-size:30px;font-weight:500;margin-top:8px;line-height:1.3">Leve o visitante até <span style="color:var(--gold)">“Pedir orçamento”</span>.</div>
@@ -184,7 +181,7 @@ body{background:#0b0510;display:flex;flex-direction:column;align-items:center;ga
 <!-- ============ 07 CTA ============ -->
 <section class="s dusk grid" id="s7">
   <div class="sun" style="width:760px;height:760px;left:160px;top:330px;opacity:.95;z-index:2"></div>
-  <div class="hd"><div class="logo"><div class="mark"><span>B<i>4</i>B</span></div><small><b>@b4b</b> | Sites que vendem</small></div><span>missão final</span></div>
+  <div class="hd"><div class="logo"><span class="b4b">B<i>4</i>B</span><small>@b4b.digital</small></div><span>missão final</span></div>
   <div class="abs script" style="top:150px;left:0;right:0;text-align:center;font-size:110px;z-index:6;transform:rotate(-5deg)">nova missão:</div>
   <div class="abs disp" style="top:290px;left:0;right:0;text-align:center;font-size:300px;z-index:3;
      background:linear-gradient(180deg,#fff7ec 40%,#ffd6b8);-webkit-background-clip:text;background-clip:text;color:transparent">Site novo</div>
@@ -195,7 +192,7 @@ body{background:#0b0510;display:flex;flex-direction:column;align-items:center;ga
       <span class="disp" style="font-size:58px;letter-spacing:0">Comenta “SITE”</span>
       <span style="width:66px;height:66px;border-radius:50%;background:var(--pink);color:#fff;display:grid;place-items:center;font-size:34px">→</span>
     </div>
-    <div style="margin-top:26px;font-size:28px;color:#e9d6ea">que a <b style="color:var(--cream)">B4B</b> te chama no direct ★★★★★</div>
+    <div style="margin-top:26px;font-size:28px;color:#e9d6ea">que a <b style="color:var(--cream)">B<span style="color:#ff6600">4</span>B</b> te chama no direct ★★★★★</div>
   </div>
   <div class="ft"><span>07 / 07</span><span class="ln"></span><span>salva esse post</span></div>
 </section>
