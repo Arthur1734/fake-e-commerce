@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Carrossel B4B GTA6</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&family=Pacifico&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#1b0b33; --deep2:#2a1150; --pink:#ff4fa0; --orange:#ffa24c; --sun:#ffd27a;
+    --teal:#2ee6d0; --violet:#8b5cff; --ink:#fff6fb; --muted:#e6cfee;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0c0618;font-family:Inter,sans-serif;color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px}
+  .slide{width:1080px;height:1350px;position:relative;overflow:hidden;
+    background:linear-gradient(180deg,#3a1462 0%,#7a2a8a 38%,#e2508e 68%,#ff9a5a 100%)}
+  .slide.dark{background:linear-gradient(180deg,var(--deep) 0%,var(--deep2) 60%,#4a1766 100%)}
+  .grain::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 4px);mix-blend-mode:overlay}
+  .top{position:absolute;top:56px;left:72px;right:72px;display:flex;justify-content:space-between;align-items:center;z-index:5;
+    font:600 26px 'JetBrains Mono',monospace;letter-spacing:2px;text-transform:uppercase}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand b{font:400 40px Anton;letter-spacing:1px;background:var(--ink);color:var(--deep);padding:2px 14px;border-radius:8px}
+  .stars{color:var(--sun);letter-spacing:6px;font-size:30px}
+  .stars i{font-style:normal;opacity:.3}
+  .bottom{position:absolute;bottom:56px;left:72px;right:72px;display:flex;justify-content:space-between;align-items:center;z-index:5;
+    font:600 24px 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:2px}
+  .bar{width:420px;height:14px;border:3px solid var(--ink);border-radius:4px;padding:2px}
+  .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--teal),#9cffb0)}
+  .swipe{display:flex;align-items:center;gap:12px}
+  .swipe::after{content:"→";font:400 44px Anton}
+  .content{position:absolute;left:72px;right:72px;z-index:4}
+  .kicker{display:inline-block;font:600 26px 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:3px;
+    color:var(--deep);background:var(--teal);padding:8px 18px;border-radius:6px;margin-bottom:28px}
+  h1,h2{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;line-height:.98;letter-spacing:.5px}
+  h1{font-size:128px}
+  h2{font-size:104px}
+  .neon{font-family:Pacifico,cursive;text-transform:none;color:var(--pink);
+    text-shadow:0 0 18px rgba(255,79,160,.8),0 0 40px rgba(255,79,160,.5);letter-spacing:0}
+  .neon.teal{color:var(--teal);text-shadow:0 0 18px rgba(46,230,208,.7),0 0 40px rgba(46,230,208,.4)}
+  .hl{background:linear-gradient(90deg,var(--orange),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+  p.lead{font-size:38px;line-height:1.35;color:var(--muted);margin-top:30px;max-width:900px}
+  p.lead strong{color:var(--ink)}
+  .lesson{margin-top:40px;background:rgba(15,5,30,.72);border:3px solid rgba(255,255,255,.18);border-left:10px solid var(--teal);
+    border-radius:18px;padding:34px 40px;backdrop-filter:blur(6px)}
+  .lesson h3{font:600 26px 'JetBrains Mono',monospace;color:var(--teal);text-transform:uppercase;letter-spacing:3px;margin-bottom:12px}
+  .lesson p{font-size:36px;line-height:1.35}
+  ul.check{list-style:none;margin-top:34px;display:grid;gap:18px}
+  ul.check li{font-size:36px;line-height:1.3;display:flex;gap:20px;align-items:flex-start;
+    background:rgba(15,5,30,.6);padding:22px 28px;border-radius:14px}
+  ul.check li::before{content:"✓";flex:none;width:46px;height:46px;border-radius:50%;background:var(--teal);color:var(--deep);
+    font:800 30px Inter;display:grid;place-items:center}
+  .photo{position:absolute;inset:0;background-size:cover;background-position:center}
+  .fade-b::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,11,51,.15) 0%,rgba(27,11,51,0) 30%,rgba(27,11,51,.85) 62%,var(--deep) 80%)}
+  .sun{position:absolute;border-radius:50%;background:linear-gradient(180deg,var(--sun),var(--orange) 50%,var(--pink));
+    -webkit-mask:repeating-linear-gradient(180deg,#000 0 22px,transparent 22px 30px);mask:repeating-linear-gradient(180deg,#000 0 22px,transparent 22px 30px)}
+  .num{position:absolute;right:40px;font:400 420px Anton;color:rgba(255,255,255,.07);line-height:1;z-index:1}
+</style>
+</head>
+<body>
+
+<!-- 1 · CAPA -->
+<section class="slide dark grain" id="s1" style="background:var(--deep)">
+  <div class="photo" style="background-image:url(assets/casal.jpg);height:900px;background-position:60% 30%"></div>
+  <div class="photo fade-b" style="height:900px;background:none"></div>
+  <div class="top"><div class="brand"><b>B4B</b> sites que vendem</div><div class="stars">★★★★★</div></div>
+  <div class="content" style="bottom:170px">
+    <span class="kicker">Edição especial</span>
+    <h1>O que o <span class="neon" style="font-size:132px">GTA 6</span><br>ensina sobre o<br><span class="hl">site da sua empresa</span></h1>
+  </div>
+  <div class="bottom"><span>01/08</span><span class="swipe">Arrasta</span></div>
+</section>
+
+<!-- 2 · HYPE -->
+<section class="slide dark grain" id="s2">
+  <div class="photo" style="background-image:url(assets/skyline.jpg);height:620px;opacity:.55"></div>
+  <div class="photo fade-b" style="height:620px;background:none"></div>
+  <div class="top"><div class="brand"><b>B4B</b> fase 1</div><div class="stars">★<i>★★★★</i></div></div>
+  <div class="content" style="top:300px">
+    <span class="kicker">Lição 01 · Hype</span>
+    <h2>Hype não é sorte.<br><span class="hl">É estratégia.</span></h2>
+    <p class="lead">O 1º trailer passou de <strong>90 milhões de views em 24h</strong>. A Rockstar fez o público esperar ansioso — muito antes de vender qualquer coisa.</p>
+    <div class="lesson"><h3>No seu site</h3><p>Lançando produto ou serviço? Crie uma <strong>página de pré-lançamento</strong> com lista de espera e comece a captar contatos antes do dia D.</p></div>
+  </div>
+  <div class="bottom"><span>02/08</span><div class="bar"><span style="width:25%"></span></div></div>
+</section>
+
+<!-- 3 · PRIMEIRA IMPRESSÃO -->
+<section class="slide grain" id="s3">
+  <div class="sun" style="width:760px;height:760px;right:-220px;top:120px;opacity:.55"></div>
+  <div class="num" style="top:80px">03</div>
+  <div class="top"><div class="brand"><b>B4B</b> fase 2</div><div class="stars">★★<i>★★★</i></div></div>
+  <div class="content" style="top:220px">
+    <span class="kicker">Lição 02 · Primeira impressão</span>
+    <h2>O trailer te<br>fisga em <span class="neon teal" style="font-size:100px">segundos</span></h2>
+    <p class="lead" style="color:var(--ink)">Seu visitante também decide rápido se fica ou vai embora. O que ele precisa ver de cara:</p>
+    <ul class="check">
+      <li>Uma frase clara dizendo o que você faz e pra quem</li>
+      <li>Visual profissional e coerente com a marca</li>
+      <li>Um botão de ação visível sem precisar rolar</li>
+    </ul>
+  </div>
+  <div class="bottom"><span>03/08</span><div class="bar"><span style="width:37%"></span></div></div>
+</section>
+
+<!-- 4 · MAPA -->
+<section class="slide dark grain" id="s4">
+  <div class="top"><div class="brand"><b>B4B</b> fase 3</div><div class="stars">★★★<i>★★</i></div></div>
+  <svg style="position:absolute;right:72px;top:540px;z-index:2" width="340" height="340" viewBox="0 0 560 560">
+    <defs><clipPath id="c"><circle cx="280" cy="280" r="250"/></clipPath></defs>
+    <circle cx="280" cy="280" r="262" fill="none" stroke="#fff6fb" stroke-width="8"/>
+    <g clip-path="url(#c)">
+      <rect width="560" height="560" fill="#2b5e6e"/>
+      <path d="M0 360 Q160 320 260 380 T560 300 V560 H0Z" fill="#3a8fa0"/>
+      <path d="M40 0 V560 M180 0 V560 M330 0 V560 M470 0 V560 M0 120 H560 M0 240 H560 M0 470 H560" stroke="#6f4a8e" stroke-width="22"/>
+      <path d="M180 470 V240 H330 V120" stroke="#ff4fa0" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="330" cy="120" r="24" fill="#ffd27a" stroke="#1b0b33" stroke-width="6"/>
+      <path d="M180 455 l-22 40 h44z" fill="#fff6fb"/>
+    </g>
+  </svg>
+  <div class="content" style="top:260px;right:72px">
+    <span class="kicker">Lição 03 · Navegação</span>
+    <h2>Mundo aberto,<br>mas com <span class="hl">mapa</span></h2>
+    <p class="lead" style="max-width:500px">No jogo, o minimapa sempre mostra o caminho até o objetivo.</p>
+  </div>
+  <div class="content" style="bottom:170px">
+    <div class="lesson"><h3>No seu site</h3><p>Menu enxuto, páginas bem nomeadas e um caminho óbvio até o contato. <strong>Cliente perdido não compra — ele fecha a aba.</strong></p></div>
+  </div>
+  <div class="bottom"><span>04/08</span><div class="bar"><span style="width:50%"></span></div></div>
+</section>
+
+<!-- 5 · PERFORMANCE -->
+<section class="slide grain" id="s5" style="background:linear-gradient(180deg,#14072a,#3a1462 55%,#7a2a8a)">
+  <div class="top"><div class="brand"><b>B4B</b> fase 4</div><div class="stars">★★★★<i>★</i></div></div>
+  <div style="position:absolute;top:170px;left:72px;right:72px;display:flex;gap:24px;z-index:3">
+    <div style="flex:1;border:3px solid var(--teal);border-radius:16px;padding:26px 30px;background:rgba(46,230,208,.08)">
+      <div style="font:600 24px 'JetBrains Mono';color:var(--teal)">SITE OTIMIZADO</div>
+      <div style="font:400 96px Anton;color:var(--teal)">60 FPS</div>
+      <div style="font-size:28px;color:var(--muted)">carrega rápido, fluido</div>
+    </div>
+    <div style="flex:1;border:3px solid var(--pink);border-radius:16px;padding:26px 30px;background:rgba(255,79,160,.08)">
+      <div style="font:600 24px 'JetBrains Mono';color:var(--pink)">SITE PESADO</div>
+      <div style="font:400 96px Anton;color:var(--pink)">LOADING…</div>
+      <div style="height:16px;border-radius:8px;background:rgba(255,255,255,.15);margin-top:14px"><div style="width:18%;height:100%;border-radius:8px;background:var(--pink)"></div></div>
+    </div>
+  </div>
+  <div class="content" style="top:480px">
+    <span class="kicker">Lição 04 · Performance</span>
+    <h2>Gráfico lindo<br>não salva <span class="hl">jogo travado</span></h2>
+    <ul class="check" style="margin-top:30px">
+      <li>Imagens comprimidas e no tamanho certo</li>
+      <li>Hospedagem rápida e código enxuto</li>
+      <li>Core Web Vitals no verde — o Google também mede isso</li>
+    </ul>
+  </div>
+  <div class="bottom"><span>05/08</span><div class="bar"><span style="width:62%"></span></div></div>
+</section>
+
+<!-- 6 · MISSÃO / CTA -->
+<section class="slide dark grain" id="s6">
+  <div class="photo" style="background-image:url(assets/personagens.jpg);height:760px;background-position:center 20%"></div>
+  <div class="photo" style="height:760px;background:linear-gradient(180deg,var(--deep) 0%,rgba(27,11,51,0) 22%,rgba(27,11,51,0) 55%,var(--deep) 100%)"></div>
+  <div class="top"><div class="brand"><b>B4B</b> fase 5</div><div class="stars">★★★★<i>★</i></div></div>
+  <div style="position:absolute;top:470px;right:72px;z-index:4;background:rgba(15,5,30,.88);border-left:8px solid var(--sun);padding:20px 28px;border-radius:8px;max-width:480px">
+    <div style="font:600 22px 'JetBrains Mono';color:var(--sun);letter-spacing:2px">OBJETIVO</div>
+    <div style="font-size:34px;font-weight:600;margin-top:6px">Leve o visitante até o botão <span style="color:var(--sun)">“Pedir orçamento”</span>.</div>
+  </div>
+  <div class="content" style="top:700px">
+    <span class="kicker">Lição 05 · Conversão</span>
+    <h2>Toda fase tem<br>uma <span class="hl">missão clara</span></h2>
+    <p class="lead">Ninguém entra numa missão sem saber o objetivo. Cada página do seu site precisa de <strong>uma ação principal</strong>: WhatsApp, orçamento, compra ou cadastro.</p>
+  </div>
+  <div class="bottom"><span>06/08</span><div class="bar"><span style="width:75%"></span></div></div>
+</section>
+
+<!-- 7 · MOBILE -->
+<section class="slide grain" id="s7">
+  <div class="sun" style="width:640px;height:640px;left:-200px;bottom:-120px;opacity:.5"></div>
+  <div class="top"><div class="brand"><b>B4B</b> fase 6</div><div class="stars">★★★★★</div></div>
+  <div style="position:absolute;right:80px;top:200px;width:360px;height:740px;border-radius:52px;background:#0c0618;padding:16px;z-index:3;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 4px rgba(255,255,255,.25)">
+    <div style="width:100%;height:100%;border-radius:40px;overflow:hidden;position:relative;background:url(assets/palmeiras.jpg) center/cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,11,51,.1),rgba(27,11,51,.85) 75%)"></div>
+      <div style="position:absolute;top:26px;left:24px;font:400 30px Anton;background:var(--ink);color:var(--deep);padding:0 10px;border-radius:6px">SUA MARCA</div>
+      <div style="position:absolute;left:24px;right:24px;bottom:30px">
+        <div style="font:400 44px/1 Anton;text-transform:uppercase">Seu site no bolso do cliente</div>
+        <div style="margin-top:18px;background:var(--teal);color:var(--deep);font:800 22px Inter;text-align:center;padding:16px;border-radius:12px">FALAR NO WHATSAPP</div>
+      </div>
+    </div>
+  </div>
+  <div class="content" style="top:230px;right:500px">
+    <span class="kicker">Lição 06 · Mobile</span>
+    <h2 style="font-size:96px">Jogue<br>em qualquer<br><span class="hl">tela</span></h2>
+    <p class="lead" style="font-size:34px">A maior parte do seu público vai abrir o site pelo celular.</p>
+  </div>
+  <div class="content" style="bottom:170px">
+    <div class="lesson"><h3>No seu site</h3><p>Pense <strong>mobile-first</strong>: botões grandes, textos legíveis e WhatsApp a um toque.</p></div>
+  </div>
+  <div class="bottom"><span>07/08</span><div class="bar"><span style="width:88%"></span></div></div>
+</section>
+
+<!-- 8 · CTA FINAL -->
+<section class="slide grain" id="s8" style="background:linear-gradient(180deg,#3a1462 0%,#6a2580 45%,var(--deep) 75%)">
+  <div class="sun" style="width:600px;height:600px;left:240px;top:150px;opacity:.85"></div>
+  <div class="photo" style="top:auto;height:520px;bottom:0;background:linear-gradient(180deg,rgba(27,11,51,0),var(--deep) 60%)"></div>
+  <div class="top"><div class="brand"><b>B4B</b> fase final</div><div class="stars">★★★★★</div></div>
+  <div style="position:absolute;top:200px;left:0;right:0;text-align:center;z-index:4">
+    <div style="display:inline-block;font:400 120px Anton;text-transform:uppercase;color:var(--ink);text-shadow:6px 6px 0 var(--pink),0 0 40px rgba(27,11,51,.8);letter-spacing:2px">Missão:<br>site novo</div>
+  </div>
+  <div class="content" style="bottom:180px;text-align:center">
+    <p class="lead" style="margin:0 auto 34px;color:var(--ink);font-size:40px">Seu site com <strong style="color:var(--sun)">5 estrelas de procura</strong> — do jeito certo.</p>
+    <div style="display:inline-flex;flex-direction:column;gap:10px;background:var(--ink);color:var(--deep);padding:30px 56px;border-radius:22px;box-shadow:0 0 0 6px var(--pink),0 20px 60px rgba(255,79,160,.5)">
+      <span style="font:400 64px Anton;text-transform:uppercase">Comente “SITE”</span>
+      <span style="font:600 28px Inter">ou chame a <b>B4B</b> no direct</span>
+    </div>
+    <p style="margin-top:34px;font:600 26px 'JetBrains Mono';letter-spacing:2px;color:var(--muted)">SALVE · COMPARTILHE COM SEU SÓCIO</p>
+  </div>
+  <div class="bottom" style="justify-content:center"><span>08/08</span></div>
+</section>
+
+</body>
+</html>
